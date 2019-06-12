@@ -1,0 +1,6 @@
+C:\Users\Bamisaye Ruth\Desktop\C#\checkbook\checkbook\bin\Debug\checkbook.exe.config
+C:\Users\Bamisaye Ruth\Desktop\C#\checkbook\checkbook\bin\Debug\checkbook.exe
+C:\Users\Bamisaye Ruth\Desktop\C#\checkbook\checkbook\bin\Debug\checkbook.pdb
+C:\Users\Bamisaye Ruth\Desktop\C#\checkbook\checkbook\obj\Debug\checkbook.csprojResolveAssemblyReference.cache
+C:\Users\Bamisaye Ruth\Desktop\C#\checkbook\checkbook\obj\Debug\checkbook.exe
+C:\Users\Bamisaye Ruth\Desktop\C#\checkbook\checkbook\obj\Debug\checkbook.pdb
