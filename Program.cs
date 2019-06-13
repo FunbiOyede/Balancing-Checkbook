@@ -8,6 +8,8 @@ namespace checkbook
 {
     class Program
     {
+        public static double balance = 0.0;
+       
         static void Main(string[] args)
         {
             mainMenu();
@@ -18,12 +20,13 @@ namespace checkbook
 
         public static void mainMenu()
         {
-            double balance = 0.0;
+           
             string mainMenuChoice = String.Empty;
 
             DepositTransaction deposit = new DepositTransaction();
             WithdrawalTransaction withdrawal = new WithdrawalTransaction();
 
+            
             Console.WriteLine("Enter \n a.Deposit   \nb.Withrawal  \nc. Quit");
             mainMenuChoice = Console.ReadLine().ToLower();
 
@@ -32,7 +35,7 @@ namespace checkbook
                 case "a":
                     deposit.Deposit(balance);
                     mainMenu();
-                    break;
+                   break;
                 case "b":
                     withdrawal.Withdrawal(balance);
                     mainMenu();
