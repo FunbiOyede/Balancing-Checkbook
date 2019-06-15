@@ -24,6 +24,10 @@ namespace checkbook
             {
                 Console.WriteLine(ex.Message);
             }
+            finally
+            {
+                program.Navigate();
+            }
           
         }
 
@@ -41,7 +45,20 @@ namespace checkbook
                     transaction.Withdrawal();
                     Navigate();
                     break;
+                case 3:
+                    Quit();
+                    break;
+              
+                default:
+                    throw new FormatException("Value expected");
+                    
             }
+        }
+
+        public void Quit()
+        {
+
+            transaction.ReadBalance();
         }
     }
 }
