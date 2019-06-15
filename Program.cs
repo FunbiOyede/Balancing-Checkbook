@@ -8,44 +8,39 @@ namespace checkbook
 {
     class Program
     {
-        public static double balance = 0.0;
+        public  double balance = 0.0;
+        //static double DepositAmount,WithdrawAmount;
+       static Program program = new Program();
+        Transaction transaction = new Transaction();
        
+
         static void Main(string[] args)
         {
-            mainMenu();
-
-            
-
+            try
+            {
+                program.Navigate();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+          
         }
 
-        public static void mainMenu()
+        public void Navigate()
         {
-           
-            string mainMenuChoice = String.Empty;
-
-            DepositTransaction deposit = new DepositTransaction();
-            WithdrawalTransaction withdrawal = new WithdrawalTransaction();
-
-            
-            Console.WriteLine("Enter \n a.Deposit   \nb.Withrawal  \nc. Quit");
-            mainMenuChoice = Console.ReadLine().ToLower();
-
-            switch (mainMenuChoice)
+            Console.WriteLine("Enter 1. Deposit   \n 2. Withdrawal ");
+            int choice = Int32.Parse(Console.ReadLine());
+            switch (choice)
             {
-                case "a":
-                    deposit.Deposit(balance);
-                    mainMenu();
-                   break;
-                case "b":
-                    withdrawal.Withdrawal(balance);
-                    mainMenu();
+                case 1:
+                    transaction.Deposit();
+                    Navigate();
                     break;
-                //case "c":
-                //    quit();
-                //    break;
-
-                default:
-                    throw new Exception("Invalid Option");
+                case 2:
+                    transaction.Withdrawal();
+                    Navigate();
+                    break;
             }
         }
     }
