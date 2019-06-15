@@ -3,10 +3,10 @@ using System.IO;
 
 namespace checkbook
 {
-    class Transaction
+    public class Transaction
     {
-        public double balance;
-      private  double WithdrawAmount = 0, DepositAmount = 0;
+      public double balance { get;  set;}
+      public  double WithdrawAmount = 0, DepositAmount = 0;
 
         public void Deposit()
         {
@@ -20,6 +20,8 @@ namespace checkbook
             balance += DepositAmount;
             Console.WriteLine("balance is {0}", balance);
             WriteToFile();
+           
+          
         }
 
 

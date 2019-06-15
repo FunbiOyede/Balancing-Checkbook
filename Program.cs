@@ -33,7 +33,7 @@ namespace checkbook
 
         public void Navigate()
         {
-            Console.WriteLine("Enter 1. Deposit   \n 2. Withdrawal ");
+            Console.WriteLine("Enter \n 1. Deposit   \n 2. Withdrawal  \n 3.Quit");
             int choice = Int32.Parse(Console.ReadLine());
             switch (choice)
             {
@@ -59,6 +59,7 @@ namespace checkbook
         {
 
             transaction.ReadBalance();
+            System.Environment.Exit(1);
         }
     }
 }
